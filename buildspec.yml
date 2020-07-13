@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
@@ -17,4 +17,4 @@ phases:
 artifacts:
   files:
     - target/aws-build-sample-maven-project-0.0.1-SNAPSHOT.jar
-  name: Cox-dev-$CODEBUILD_BUILD_NUMBER-$(date +%Y-%m-%d) 
+  name: Cox-dev-Buildnumber-$CODEBUILD_BUILD_NUMBER-$(date +%Y-%m-%d)
