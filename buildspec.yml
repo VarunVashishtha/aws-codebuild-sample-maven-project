@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variable:
-    maven: maven=3.5.4
+    MAVEN_VERSION: "3.5.4"
 
 phases:
   install:
@@ -14,6 +14,8 @@ phases:
       - echo Nothing to do in the pre_build phase..
       - apt-get install -y $maven
       - mvn -v
+    finally:
+      - echo Nothing to do in the finally..
   build:
     commands:
       - echo Build started on `date`
