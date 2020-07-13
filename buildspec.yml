@@ -12,7 +12,6 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase..
-      - apt-get install -y $maven
       - mvn -v
     finally:
       - echo Nothing to do in the finally..
