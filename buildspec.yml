@@ -14,7 +14,7 @@ phases:
       - echo Nothing to do in the pre_build phase..
       - mvn -v
     finally:
-      - echo Nothing to do in the finally..
+      - echo Nothing to do in the finally...
   build:
     commands:
       - echo Build started on `date`
