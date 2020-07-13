@@ -2,14 +2,14 @@ version: 0.2
 
 env:
   variable:
-    MAVEN_VERSION: 3.5.4
+    MAVEN_VERSION: "3.5.4"
 
 phases:
   install:
     runtime-versions:
       java: openjdk8
     commands:
-      apt-get install -y maven-$MAVEN_VERSION
+      apt-get install -y maven
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase..
