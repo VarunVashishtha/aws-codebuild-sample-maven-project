@@ -1,13 +1,19 @@
 version: 0.2
 
+env:
+  MAVEN_VERSION=3.5.4
+
+
 phases:
   install:
     runtime-versions:
       java: openjdk8
       
+      
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase..
+      - mvn -v
   build:
     commands:
       - echo Build started on `date`
