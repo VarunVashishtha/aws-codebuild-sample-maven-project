@@ -1,14 +1,10 @@
 version: 0.2
 
-env:
-  MAVEN_VERSION: 3.5.4
-
-
 phases:
   install:
     runtime-versions:
       java: openjdk8
-      
+      MAVEN_VERSION: 3.5.4
       
   pre_build:
     commands:
