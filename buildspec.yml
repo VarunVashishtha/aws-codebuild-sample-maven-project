@@ -2,16 +2,16 @@ version: 0.2
 
 env:
   variable:
-    MAVEN_VERSION: 3.5.4
+    $MAVEN_VERSION: 3.5.4
 
 phases:
   install:
     runtime-versions:
       java: corretto8
+       
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase..
-      - yum install -y maven-$MAVEN_VERSION
       - mvn -v
     finally:
       - echo Nothing to do in the finally...
