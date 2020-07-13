@@ -7,10 +7,11 @@ env:
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: corretto8
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase..
+      - yum install -y maven-$MAVEN_VERSION
       - mvn -v
     finally:
       - echo Nothing to do in the finally...
