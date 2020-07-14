@@ -7,22 +7,32 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: openjdk8
        
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase..
+      - echo Nothing to do in the pre_build phase...
       - mvn -v
     finally:
-      - echo Nothing to do in the finally...
+      - echo Nothing to do in the pre-build's finally...
   build:
     commands:
       - echo Build started on `date`
       - mvn install
+    finally:
+      - echo Nothing to do in the build's finally...  
   post_build:
     commands:
       - echo Build completed on `date`
+    finally:
+      - echo Nothing to do in the post_build's finally...     
+    
 artifacts:
   files:
     - target/APP.jar
-  name: Cox-dev-Buildnumber-$CODEBUILD_BUILD_NUMBER-$(date +%Y-%m-%d)
+  name: Application-Buildnumber-->$CODEBUILD_BUILD_NUMBER--$(date +%d-%m-%Y)
+  
+  
+  
+  
+  
