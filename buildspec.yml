@@ -25,7 +25,7 @@ phases:
     commands:
       - echo Build completed on `date`
     finally:
-      - echo Nothing to do in the postbuild finally...     
+      - echo Nothing to do in the postbuild finally....     
     
 artifacts:
   files:
